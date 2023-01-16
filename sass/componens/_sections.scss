@@ -1,0 +1,204 @@
+// ️☎️ Mobile First START...
+.section {
+  padding: 94px 0;
+
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    &__mobile {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    &--hider {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0 auto;
+  }
+
+  &__icon {
+    padding-bottom: 0;
+    background-color: $teamColor;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--box {
+
+      border: 1px solid currentColor;
+      color: $customersBrColor;
+      margin: 0;
+      width: 210px;
+      height: 92px;
+
+      &:hover,
+      &:focus {
+        color: $accentColor;
+        outline: none;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__topic {
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    line-height: 1.71;
+    color: $bravoColor;
+
+  }
+
+  &__photo {
+    position: relative;
+  }
+
+  &__subtitle {
+    position: absolute;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $primaryBgColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__customers {
+    fill: currentColor;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+  }
+}
+
+
+
+.team {
+  background-color: $teamColor;
+
+  &__item {
+    background-color: $primaryBgColor;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__name {
+    padding: 30px 0;
+  }
+
+  &__fullname {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  &__jobs {
+    font-size: 16px;
+    line-height: 1.18;
+    color: $bravoColor;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+}
+
+// ️☎️ Mobile First ...END 
+
+@media screen and (min-width: 768px) {
+  .section {
+
+    &__icon {
+      &--box {
+        width: 226px;
+      }
+    }
+
+    &__block {
+      width: 354px;
+    }
+
+    &__topic {
+      text-align: left;
+    }
+
+    &__photo {
+      position: relative;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .margin-out {
+    padding-bottom: 0;
+  }
+
+  .section {
+
+    &__icon {
+      &--box {
+        width: 170px;
+      }
+    }
+
+    &__block {
+      width: 270px;
+    }
+
+    &__topic {
+      text-align: left;
+    }
+  }
+}

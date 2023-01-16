@@ -1,0 +1,177 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* dodac powyzej do transition, aby uzyskac efekt pojawienia sie oraz w .is-hidden wlczyc wylaczone: ,transform 1000ms ease; */
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  /* transform: scale(0); */
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: $primaryBgColor;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px;
+
+  @media screen and (max-width: 1199px) {
+    width: 95%;
+    max-width: 450px;
+    height: 95%;
+    max-height: 609px;
+    overflow: scroll;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    border: none;
+  }
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: $alfaColor;
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $bravoColor;
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    height: 40px;
+    width: 100%;
+    padding: 0 0 0 42px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: $accentColor;
+    }
+    &:focus + .modal__icon {
+      fill: $accentColor;
+    }
+    &:hover + .modal__icon {
+      fill: $accentColor;
+    }
+  }
+  &__icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    fill: $alfaColor;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__text {
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    resize: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      border-color: $accentColor;
+    }
+    &:focus {
+      border-color: $accentColor;
+      outline: none;
+    }
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+}
+
+.terms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 24px;
+
+  &__label {
+    position: relative;
+  }
+  &__input {
+    appearance: none;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.71;
+    color: $bravoColor;
+  }
+  &__links {
+    color: $accentColor;
+    text-decoration: underline;
+  }
+  &__checked {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 1;
+    background-color: $accentColor;
+    border-radius: 2px;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 2px;
+    fill: $alfaColor;
+    stroke: $alfaColor;
+
+    &:focus {
+      fill: $accentColor;
+      stroke: $accentColor;
+      outline: none;
+    }
+  }
+  &__input:checked + &__checked {
+    opacity: 1;
+  }
+}

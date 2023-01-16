@@ -1,0 +1,74 @@
+@import './utils/vars';
+@import './componens/pages';
+@import './componens/logo';
+@import './componens/buttons';
+@import './componens/sections';
+@import './componens/social-media';
+@import './componens/modal';
+@import './componens/portfolio';
+@import './componens/mobile-menu';
+
+body {
+  font-family: $fontFamily;
+  color: $alfaColor;
+  background-color: $primaryBgColor;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+address {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+  /* outline: 1px dashed red; */
+}
+.current {
+  color: $accentColor;
+
+  &::after {
+    display: block;
+    content: '';
+    width: 58px;
+    height: 4px;
+    background: $accentColor;
+    border-radius: 2px;
+    margin-top: 28px;
+  }
+}

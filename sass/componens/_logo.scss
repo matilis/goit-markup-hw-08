@@ -1,0 +1,47 @@
+.logo {
+  text-decoration: none;
+  font-family: $fontLogo;
+  font-size: 24px;
+  line-height: 1.16;
+  padding: 0;
+  display: flex;
+
+  &--footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__web {
+    color: $accentColor;
+  }
+
+  &__studio {
+    color: $charlieColor;
+
+    &--footer {
+      font-family: $fontLogo;
+      font-size: 24px;
+      line-height: 1.16;
+      color: $primaryBgColor;
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+
+    &__studio--footer {
+      font-size: 26px;
+      line-height: 1.19;
+    }
+  }
+
+  .logo--footer {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
