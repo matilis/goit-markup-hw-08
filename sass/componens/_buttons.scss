@@ -65,7 +65,7 @@
 .btn-close {
   position: absolute;
   top: 8px;
-  left: 490px;
+  right: 8px;
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -81,43 +81,4 @@
     outline: none;
     background-color: $accentColor;
   }
-}
-
-.menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  outline: none;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-}
-
-.menu-toggle:hover,
-.menu-toggle:focus {
-  fill: $accentColor;
-}
-
-.menu-container .menu-toggle {
-  position: absolute;
-  top: 21px;
-  right: 25.33px;
-  fill: $alfaColor;
-}
-
-.menu-container .menu-toggle:hover,
-.menu-container .menu-toggle:focus {
-  fill: $accentColor;
 }

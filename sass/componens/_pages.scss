@@ -10,6 +10,8 @@
   }
 }
 
+
+
 .navigation {
   &__list {
     display: flex;
@@ -113,7 +115,6 @@
     text-align: center;
     font-style: normal;
     margin-top: 20px;
-    margin-bottom: 60px;
   }
 
   &__item {
@@ -205,7 +206,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .navigation {
     &__list {
       display: none;
