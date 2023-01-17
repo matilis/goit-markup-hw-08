@@ -1,3 +1,12 @@
+// ️☎️ Mobile First START...
+.btn-portfolio {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
 .gallery {
   flex-wrap: wrap;
 
@@ -12,10 +21,12 @@
       outline: none;
     }
   }
+
   &__box {
     position: relative;
     overflow: hidden;
   }
+
   &__overlay {
     position: absolute;
     top: 0;
@@ -30,16 +41,20 @@
     padding: 49px 45px 49px 24px;
     color: $primaryBgColor;
   }
+
   &__img:hover .gallery__overlay {
     transform: translateY(0);
   }
+
   &__img:focus .gallery__overlay {
     transform: translateY(0);
   }
+
   &__wrapper {
     border: 1px solid $galleryBrColor;
     padding: 20px 24px;
   }
+
   &__title {
     font-weight: 700;
     font-size: 18px;
@@ -48,9 +63,30 @@
     margin-bottom: 4px;
     color: $charlieColor;
   }
+
   &__subtitle {
     font-size: 16px;
     line-height: 1.87;
     color: $bravoColor;
+  }
+}
+
+// ️☎️ Mobile First ...END
+
+@media screen and (min-width: 768px) {
+  .btn-portfolio {
+    justify-content: center;
+
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+
+    .btn-portfolio {
+      margin-bottom: 50px;
+    }
   }
 }

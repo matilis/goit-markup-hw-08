@@ -36,6 +36,8 @@
   background-color: $teamColor;
   padding: 6px 22px;
 
+
+
   &:hover,
   &:focus {
     background-color: $accentColor;
@@ -80,5 +82,12 @@
   &:focus {
     outline: none;
     background-color: $accentColor;
+  }
+
+  .btn-portfolion {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
   }
 }
