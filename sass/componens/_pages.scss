@@ -91,7 +91,7 @@
     text-transform: uppercase;
     margin: 0 auto;
     margin-bottom: 30px;
-    max-width: 400px;
+    max-width: 365px;
   }
 }
 
@@ -110,6 +110,10 @@
   &__box {
     display: flex;
     flex-direction: column;
+  }
+
+  &__mobile {
+    margin-bottom: 60px;
   }
 
   &__contact {
@@ -311,6 +315,10 @@
       display: flex;
       flex-direction: row;
       align-items: baseline;
+    }
+
+    &__mobile {
+      margin-bottom: 0px;
     }
 
     &__item {
